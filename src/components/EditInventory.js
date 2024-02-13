@@ -6,7 +6,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { Grid,IconButton,Box } from "@mui/material";
+import { Grid,IconButton,Box, Typography } from "@mui/material";
 
 import CloseIcon from '@mui/icons-material/Close';
 import { useSelector } from "react-redux";
@@ -66,7 +66,11 @@ export default function EditInventory(props) {
         <IconButton onClick={()=>handleClose()} sx={{height:"40px"}}><CloseIcon color="primary"/></IconButton>
         </Box>
         <DialogContent>
-          <DialogContentText>{itemData.name}</DialogContentText>
+          <DialogContentText>
+            <Typography variant="h5" color={"primary"} sx={{mb:1,mt:-2}}>
+            {itemData.name}
+            </Typography>
+            </DialogContentText>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
               <TextField
