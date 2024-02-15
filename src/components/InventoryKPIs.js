@@ -34,7 +34,7 @@ export default function InventoryKPIs() {
         icon: <ShoppingCartIcon />,
       },
       {
-        name: "Total store value",
+        name: "Total value",
         count: NumberWithCommas(tempStoreVal),
         icon: <CurrencyExchangeIcon />,
       },
@@ -44,7 +44,7 @@ export default function InventoryKPIs() {
         icon: <RemoveShoppingCartIcon />,
       },
       {
-        name: "Number of category",
+        name: "Categories",
         count: tempCategory.length,
         icon: <CategoryIcon />,
       },
@@ -65,7 +65,7 @@ export default function InventoryKPIs() {
         <div>
           <p>{name}</p>
           <h3>
-            {name === "Total store value" && "$"}
+            {name === "Total value" && "$"}
             {count}
           </h3>
         </div>
